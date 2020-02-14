@@ -47,6 +47,7 @@ describe "Movie Show Page" do
 
     it "I see a form to input an actors name and when I fill in and submit, I'm
         redirected back to that movies show page where I see that actors name " do
+      studio_1 = Studio.create(name: "Universal Studio")
       studio_2 = Studio.create(name: "Disney")
 
       actor_1 = Actor.create!(name: "Daniel Mackey", age: 23)
@@ -75,7 +76,7 @@ describe "Movie Show Page" do
         expect(page).to have_content(actor_3.name)
       end
 
-      fill_in :actor_name, with: "#{actor_4.name}"
+      fill_in :name, with: "#{actor_4.name}"
       click_on "Add Actor"
 
       expect(current_path).to eq("/movies/#{movie_3.id}")
