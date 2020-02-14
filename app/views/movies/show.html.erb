@@ -1,0 +1,7 @@
+<h1><%= @movie.title %></h1>
+
+<section id="actors">
+  <% @movie.actors_by_age.each do |actor| %>
+    <%= actor.name %>
+  <% end %>
+</section>
