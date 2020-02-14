@@ -3,5 +3,8 @@
 <% @studios.each do |studio| %>
 <section id="studio-<%= studio.id %>">
   <h3><%= studio.name %></h3>
+  <% studio.movies.each do |movie| %>
+  <%= movie.title %>
+  <% end %>
 </section>
 <% end %>
