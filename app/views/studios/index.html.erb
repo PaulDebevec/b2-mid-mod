@@ -1,0 +1,7 @@
+<h1>Studios Index</h1>
+
+<% @studios.each do |studio| %>
+<section id="studio-<%= studio.id %>">
+  <h3><%= studio.name %></h3>
+</section>
+<% end %>
