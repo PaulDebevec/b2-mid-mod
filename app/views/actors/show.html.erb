@@ -8,3 +8,9 @@
     <h4><%= movie.title %></h4>
   <% end %>
 </section>
+
+<section id="worked-with">
+  <% @actor.associates.each do |associate| %>
+    <%= associate.name %>
+  <% end %>
+</section>
